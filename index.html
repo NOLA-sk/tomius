@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>ТомИУС-ПРОЕКТ</title>
+</head>
+<body>
+    <div class="main_block">
+        <div class="container">            
+            <div class="header">
+                <header class="header_navigation">
+                    <div class="header_navigation_logo">
+                        <img class="logo" src="./icons/logo.svg" alt="logo">
+                    </div>
+                    <nav class="header_navigation_menu">
+                        <a href="#" class="header_navigation_menu_item">Главная</a>
+                        <a href="page3.html" class="header_navigation_menu_item">О Компании</a>
+                        <a href="#info" class="header_navigation_menu_item">Деятельность</a>
+                        <a href="#footer" class="header_navigation_menu_item">Контакты</a>
+                    </nav>                    
+                    <div class="header_navigation_btn">
+                        <button class="header_navigation_btn_red btn">
+                            Напишите нам
+                        </button>
+                    </div>
+                    <div class="header_navigation_phone">
+                        <img src="./icons/phone.svg" alt="phone" class="header_navigation_phone_icon">
+                        <div class="header_navigation_phone_numbers"> 
+                            <a href="tel:3822426463"     class="header_navigation_phone_numbers_num">
+                                (3822) 42-64-63
+                            </a>
+                            <a href="tel:3822606340" class="header_navigation_phone_numbers_num">
+                                (3822) 60-63-40
+                            </a>
+                        </div>
+                    </div>  
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>              
+                </header>
+            </div>
+
+            <div class="description">
+                <div class="description_wrapper">
+                    <div class="title">
+                        Научно-производственное предприятие ООО "ТомИУС-ПРОЕКТ"
+                    </div>
+                    <div class="description_wrapper_subtitle">
+                        Cпециализируется на разработке и производстве программных и аппаратных средств для АСУТП
+                    </div>
+                    <div class="description_wrapper_btns">
+                        <button class="description_wrapper_btns_more btn">
+                            Подробнее
+                        </button>
+                        <button class="description_wrapper_btns_contacts btn">
+                            Контакты
+                        </button>
+                    </div>
+                </div>
+                <div class="description_wrapper">
+                    <div class="description_text">
+                        <span>
+                            Традиционно ТомИУС-ПРОЕКТ является поставщиком услуг по разработке программного обеспечения для систем промышленной автоматизации, систем автоматизации стендовых испытаний и экспериментов. Но кроме этого существенную долю в деятельности фирмы составляют услуги по проектированию систем автоматизации технологических процессов.
+                        </span> 
+                    </div>
+                </div>                            
+            </div>            
+        </div>
+    </div>
+
+    <div class="info_block" id="info">
+        <div class="container">
+            <div class="info_wrapper">
+                <div class="info_wrapper_item">
+                    <div class="info">
+                        <div class="title">
+                            Деятельность
+                        </div>
+                        <div class="info_descr">
+                            <ul class="info_descr_list">
+                                <li class="info_descr_list_item">проектирование, производство и внедрение высокоэффективных информационно-управляющих систем (ИУС) и автоматизированных систем управления технологическими процессами (АСУТП) для различных отраслей производства;
+                                </li>
+                                <li class="info_descr_list_item">разработка и производство высокотехнологичных микроэлектронных устройств и приборов, построенных на современной элементной базе;
+                                </li>
+                                <li class="info_descr_list_item">разработка заказного программного обеспечения в области автоматизации производства с применением современных средств компьютерного проектирования;</li>
+                                <li class="info_descr_list_item">разработка типовых проектных решений для автоматизации производственных котельных с использованием программных и технических средств Siemens.</li>
+                            </ul>
+                        </div>
+                        <div class="info_btns">
+                            <button class="info_btns_more btn">
+                                <a href="page2.html" class="info_btns_more_link">
+                                    Посмотреть проекты
+                                </a>
+                            </button>
+                            <button class="info_btns_contact btn">
+                                Напишите нам
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info_wrapper_item">
+                    <div class="prodacts">
+                        <div class="title">
+                            Выпускаемая продукция и услуги:
+                        </div>
+                        <div class="prodacts_slider">
+                            <div class="prodacts_slider_btns">
+                                <button class="prodacts_slider_btns_prev arrow_btn">
+                                    <img class="prodacts_slider_btns_prev_icon" src="./icons/prev-icon.svg" alt="prev">
+                                </button>
+                                <button class="prodacts_slider_btns_next arrow_btn">
+                                    <img class="prodacts_slider_btns_prev_icon" src="./icons/next-icon.svg" alt="next">
+                                </button>
+                            </div>
+                            <div class="prodacts_slider_cards">
+                                <div class="prodacts_slider_cards_item">
+                                    Электронные модули в стандарте ISA, PCI и устройства, конструктивно выполненные в виде блоков с монтажом на DIN-рельс
+                                </div>
+                                <!-- <div class="prodacts_slider_cards_item">
+                                    Услуги по проектированию, монтажу и наладке систем автоматизации установок до 1000 Вольт, в том числе: по разработке технических заданий, технико-экономических обоснований (ТЭО) и эскизных проектов на АСУ, технических проектов, рабочей и эксплуатационной документации</div>
+                                <div class="prodacts_slider_cards_item">
+                                    Блоки в стандарте Евромеханика с установкой в 19″ шкафы и стойки управления и сбора данных, выполненные согласно проектных требований на автоматизацию конкретного процесса или технологической установки;
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="partners_block">
+        <div class="container">
+            <div class="partners">
+                <div class="title">
+                    Партнеры:
+                </div>
+
+                <div class="partners_title">
+                    РОССИЙСКАЯ ФЕДЕРАЦИЯ
+                </div>
+                <div class="partners_title">
+                    г. Томск
+                </div>
+                <div class="partners_slider">
+                    <button class="partners_slider_btn arrow_btn">
+                        <img class="partners_slider_btn_icon" src="./icons/prev-icon.svg" alt="prev">
+                    </button>
+                    <div class="partners_slider_cards">
+                        <div class="partners_slider_cards_item tomsk_partners">
+                            Томский политехнический университет
+                        </div>
+                        <div class="partners_slider_cards_item tomsk_partners">
+                            ЗАО «Элеси»
+                        </div>
+                        <div class="partners_slider_cards_item tomsk_partners">
+                            НИИ автоматики и электромеханики (НИИАЭМ) ГОУ ВПО «ТУСУР» 
+                        </div>
+                        <!-- <div class="partners_slider_cards_item tomsk_partners">
+                            ООО «Электрозащита»
+                        </div> -->
+                    </div>
+                    <button class="partners_slider_btn arrow_btn">
+                        <img class="partners_slider_btn_icon" src="./icons/next-icon.svg" alt="next">
+                    </button>
+                </div>
+
+                <div class="partners_title">
+                    Москва и Санкт - Петербург
+                </div>
+                <div class="partners_slider">
+                    <button class="partners_slider_btn arrow_btn">
+                        <img class="partners_slider_btn_icon" src="./icons/prev-icon.svg" alt="prev">
+                    </button>
+                    <div class="partners_slider_cards">
+                        <div class="partners_slider_cards_item msk_partners">
+                            AdAstrA Research Group Ltd
+                        </div>
+                        <div class="partners_slider_cards_item msk_partners">
+                            ЗАО «РТСфот»
+                        </div>
+                        <div class="partners_slider_cards_item msk_partners">
+                            НИЦ "Курчатовский институт" 
+                        </div>
+                        <!-- <div class="partners_slider_cards_item msk_partners">
+                            Научно-исследовательский институт Электро-физической аппаратуры им. Ефремова (НИИ ЭФА)
+                        </div> -->
+                    </div>
+                    <button class="partners_slider_btn arrow_btn">
+                        <img class="partners_slider_btn_icon" src="./icons/next-icon.svg" alt="next">
+                    </button>
+                </div>
+
+                <div class="partners_title">
+                    РЕСПУБЛИКА КАЗАХСТАН
+                </div>
+                <div class="partners_slider">
+                    <button class="partners_slider_btn arrow_btn">
+                        <img class="partners_slider_btn_icon" src="./icons/prev-icon.svg" alt="prev">
+                    </button>
+                    <div class="partners_slider_cards">
+                        <div class="partners_slider_cards_item kz_partners">
+                            Национальный ядерный центр Республики Казахстан (НЯЦ РК)
+                        </div>
+                        <div class="partners_slider_cards_item kz_partners">
+                            Институт атомной энергии (ИАЭ) НЯЦ РК,  г. Курчатов
+                        </div>
+                        <div class="partners_slider_cards_item kz_partners">
+                            ТОО «Казэлектромаш», г. Семей
+                        </div>
+                        <!-- <div class="partners_slider_cards_item kz_partners">
+                            ТОО «Промэнергопроект» , г. Семей
+                        </div> -->
+                    </div>
+                    <button class="partners_slider_btn arrow_btn">
+                        <img class="partners_slider_btn_icon" src="./icons/next-icon.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_block" id="footer">
+        <div class="container">
+            <footer class="footer">
+                    <div class="footer_info">
+                        <div class="title">
+                            ООО «ТомИУС-ПРОЕКТ»
+                        </div>
+                        <div class="footer_info_text">
+                            Юридический адрес: 634034, Россия, г. Томск, ул. Советская, 114
+                        </div>
+                        <div class="footer_info_text">
+                            Почтовый адрес: 634034, Россия, г. Томск, ул. Советская, 114
+                        </div>
+                        <div class="footer_info_text">
+                            Тел/факс: 
+                            <a href="tel:3822426463" class="footer_workers_phone_num">
+                                (3822) 42-64-63
+                            </a>
+                        </div>
+                        <div class="footer_info_text">
+                            E-mail: buh2@tomics.tomsk.ru 
+                        </div>
+                    </div>
+
+                    <div class="footer_workers">
+                        <div class="footer_workers_position">
+                            Генеральный директор
+                        </div>
+                        <div class="footer_workers_name">
+                            Байструков Константин Иванович
+                        </div>
+                        <div class="footer_workers_phone">
+                            Тел/факс: 
+                            <a href="tel:3822606340" class="footer_workers_phone_num">
+                                (3822) 60-63-40
+                            </a>
+                        </div>
+                        <div class="footer_workers_email">
+                            E-mail: info@tomics.tomsk.ru
+                        </div>
+
+                        <div class="footer_workers_position">
+                            Технический директор
+                        </div>
+                        <div class="footer_workers_name">
+                            Дзалбо Виктор Владимирович
+                        </div>
+                        <div class="footer_workers_phone">
+                            Тел/факс: 
+                            <a href="tel:3822426463" class="footer_workers_phone_num">
+                                (3822) 42-64-63,
+                            </a> 
+                            <a href="tel:+79282453848" class="footer_workers_phone_num">
+                                +7 928 245 3848
+                            </a>
+                        </div>
+                        <div class="footer_workers_email">
+                            E-mail: dzalbo@tomics.tomsk.ru
+                        </div>
+
+                        <div class="footer_workers_position">
+                            Главный бухгалтер
+                        </div>
+                        <div class="footer_workers_name">
+                            Медведева Анастасия Николаевна
+                        </div>
+                        <div class="footer_workers_phone">
+                            Тел/факс: 
+                            <a href="tel:+3822426463" class="footer_workers_phone_num">
+                                (3822) 42-64-63
+                            </a>                             
+                        </div>
+                        <div class="footer_workers_email">
+                            E-mail: buh2@tomics.tomsk.ru
+                        </div>
+                    </div>                    
+            </footer>            
+        </div>
+
+        <footer class="subfooter">
+            <div class="container">
+                <div class="developed">
+                    <div class="developed_text">
+                        ©2021 Разработано
+                    </div>
+                    <div class="developed_link">
+                        <a href="#" class="developed_link_icon">
+                            ???
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>

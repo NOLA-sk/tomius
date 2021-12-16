@@ -1,0 +1,10 @@
+{
+  "name": "tomius",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "devDependencies": {
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
+}

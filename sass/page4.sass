@@ -1,0 +1,194 @@
+*
+    font-family: Open Sans, sans-serif
+    box-sizing: border-box
+
+@import "variables"
+
+.main_block
+    height: 100%
+    background: url(../img/bg-main-page4.png) no-repeat center
+    background-size: cover
+    padding-bottom: 80px
+
+.header
+    padding-top: 30px   
+
+.header_navigation
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_menu
+        margin-left: 60px
+        display: flex
+        justify-content: space-between
+        width: 600px
+        &_item
+            text-decoration: none
+            color: $text-color-first
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            &:hover
+                color: $btn-color-red
+                transition: 0.5s
+    &_btn
+        &_red
+            background-color: $btn-color-red
+            color: $text-color-first
+            &:hover
+                background-color: $btn-color-dark-red
+                transition: 0.5s
+
+    &_phone
+        display: flex
+        justify-content: space-between
+        &_icon
+            padding-right: 10px
+        &_numbers
+            display: flex
+            flex-direction: column
+            &_num
+                color: $text-color-first
+                text-decoration: none
+                &:hover
+                    color: $btn-color-red
+                    transition: 0.5s
+
+.specifications
+    font-size: 20px
+    color: $text-color-first
+    margin-top: 80px
+    &_title
+        font-weight: bold
+        font-size: 36px
+        margin-bottom: 35px
+        color: $text-color-first
+    &_descr
+        margin-bottom: 35px
+        &_link
+            color: $text-color-first
+            &:hover
+                color: $btn-color-red
+                transition: 0.5s
+
+
+.title
+    margin: 0 auto
+    font-weight: bold
+    font-size: 36px
+    margin-bottom: 35px
+    color: $text-color-first
+
+.white_bg
+    background-color: #FFFFFF
+
+.grey_bg
+    background: #C7C7C7
+
+.table
+    color: $text-color-first
+    font-size: 20px
+    margin: 0 auto
+    margin-bottom: 80px    
+    &_indicators
+        width: 1010px
+        color: #000000
+        &_row
+            height: 50px
+            &_name
+                width: 700px
+            &_count
+                text-align: center
+
+.specifications_btn
+    margin: 0 auto
+    &_back
+        background-color: $btn-color-red
+        color: $text-color-first
+        margin-right: 15px
+        &:hover
+            background-color: $btn-color-dark-red        
+        &_link
+            text-decoration: none
+            color: $text-color-first
+            &:hover
+                color: $text-color-first
+
+//scheme_block
+.scheme_block
+    padding: 80px 0px
+
+.scheme_title
+    color: #000000
+
+.shemes_pictures
+    margin-bottom: 35px
+    &_img
+        width: 750px
+        height: 575px    
+
+//opportunities
+.opportunities
+    font-size: 20px
+    margin-bottom: 80px
+    &_title
+        color: #000000
+        font-size: 24px
+
+//footer
+.footer_block
+    height: 100%
+    background: url(../img/bg-footer.png) no-repeat center
+    background-size: cover
+
+.footer
+    color: $text-color-first
+    display: flex
+    justify-content: space-between
+    padding: 80px 0px
+    &_info
+        width: 750px
+        font-weight: bold
+        &_title            
+            font-size: 30px
+            margin-bottom: 80px
+        &_text
+            font-size: 20px
+            margin-bottom: 35px
+    &_workers
+        width: 490px
+        font-size: 20px
+        text-align: right
+        &_position
+            font-weight: bold
+        &_phone
+            &_num
+                text-decoration: none
+                color: $text-color-first
+                &:hover
+                    color: $btn-color-red
+                    transition: 0.5s
+        &_email
+            margin-bottom: 35px
+            &:last-child
+                margin-bottom: 0px
+        
+.subfooter
+    background-color: #000000
+
+.developed
+    display: flex
+    justify-content: center
+    padding: 25px 0px
+    font-weight: bold
+    font-size: 20px
+    color: $text-color-first
+    &_text
+        margin-right: 15px
+    &_link
+        &_icon
+            text-decoration: none
+            color: $text-color-first
+            &:hover
+                color: $btn-color-red
+                transition: 0.5s

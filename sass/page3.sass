@@ -1,0 +1,221 @@
+*
+    font-family: Open Sans, sans-serif
+    box-sizing: border-box
+
+@import "variables"
+
+.main_block
+    height: 100vh
+    background: url(../img/bg-main-page3.png) no-repeat center
+    background-size: cover
+
+.header
+    padding-top: 30px   
+
+.header_navigation
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_menu
+        margin-left: 60px
+        display: flex
+        justify-content: space-between
+        width: 600px
+        &_item
+            text-decoration: none
+            color: $text-color-first
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            &:hover
+                color: $btn-color-red
+                transition: 0.5s
+    &_btn
+        &_red
+            background-color: $btn-color-red
+            color: $text-color-first
+            &:hover
+                background-color: $btn-color-dark-red
+                transition: 0.5s
+
+    &_phone
+        display: flex
+        justify-content: space-between
+        &_icon
+            padding-right: 10px
+        &_numbers
+            display: flex
+            flex-direction: column
+            &_num
+                color: $text-color-first
+                text-decoration: none
+                &:hover
+                    color: $btn-color-red
+                    transition: 0.5s
+
+.description    
+    height: 100vh
+    display: flex
+    flex-wrap: nowrap       
+    &_wrapper        
+        max-width: 1150px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        color: $text-color-first
+        font-style: normal
+        &_title
+            font-weight: bold
+            font-size: 36px
+            margin-bottom: 35px
+        &_text
+            margin-bottom: 35px
+            font-size: 20px
+        &_btn
+            &_back
+                background-color: $btn-color-red
+                color: $text-color-first
+                margin-right: 15px
+                &:hover
+                    background-color: $btn-color-dark-red        
+                &_link
+                    text-decoration: none
+                    color: $text-color-first
+                    &:hover
+                        color: $text-color-first
+
+//info_block
+.info_block
+    background: linear-gradient(180deg, rgba(22, 67, 78, 0.24) 72.4%, rgba(58, 93, 111, 0) 100%)
+    padding-top: 80px
+    padding-bottom: 80px    
+    font-size: 20px
+    text-align: justify
+
+.info_text
+    margin-bottom: 35px
+
+.dropdawn
+    margin: 0 auto
+    margin-bottom: 35px
+    &_menu
+        &_link
+            display: flex       
+            justify-content: space-between
+            align-items: center         
+            text-decoration: none
+            color: $text-color-first
+            font-weight: bold
+            font-size: 20px
+            width: 800px
+            height: 60px
+            // position: relative
+            background-color: #051C33
+            border-radius: 5px
+            padding: 0px 30px                
+            &:hover
+                color: $text-color-first
+                background-color: #15406b
+                transition: all 0.5s
+                box-shadow: 0 0 10px rgba(0,0,0,0.7)                    
+        &_submenu
+            display: none
+            // position: absolute
+            top: auto
+            right: 190px
+            width: 800px
+            background-color: #051C33
+            border-radius: 5px
+            padding: 0px 30px
+            margin-bottom: 35px
+            &_item
+                text-decoration: none
+                color: $text-color-first
+                font-size: 20px                
+                &:hover
+                    color: $btn-color-red
+                    transition: all 0.5s
+        
+.dropdawn_menu:hover > .dropdawn_menu_submenu
+    display: block 
+
+.info_btn
+    margin: 0 auto
+    margin-bottom: 35px
+    &_more
+        background-color: $btn-color-red
+        color: $text-color-first
+        margin-right: 15px
+        width: 280px
+        &:hover
+            background-color: $btn-color-dark-red  
+        &_link
+            text-decoration: none
+            color: $text-color-first
+            &:hover
+                color: $text-color-first
+
+//map
+.address
+    &_text
+        font-weight: bold
+        font-size: 36px
+        margin-bottom: 35px
+
+//footer
+.footer_block
+    height: 100%
+    background: url(../img/bg-footer.png) no-repeat center
+    background-size: cover
+
+.footer
+    color: $text-color-first
+    display: flex
+    justify-content: space-between
+    padding: 80px 0px
+    &_info
+        width: 750px
+        font-weight: bold
+        &_title            
+            font-size: 30px
+            margin-bottom: 80px
+        &_text
+            font-size: 20px
+            margin-bottom: 35px
+    &_workers
+        width: 490px
+        font-size: 20px
+        text-align: right
+        &_position
+            font-weight: bold
+        &_phone
+            &_num
+                text-decoration: none
+                color: $text-color-first
+                &:hover
+                    color: $btn-color-red
+                    transition: 0.5s
+        &_email
+            margin-bottom: 35px
+            &:last-child
+                margin-bottom: 0px
+        
+.subfooter
+    background-color: #000000
+
+.developed
+    display: flex
+    justify-content: center
+    padding: 25px 0px
+    font-weight: bold
+    font-size: 20px
+    color: $text-color-first
+    &_text
+        margin-right: 15px
+    &_link
+        &_icon
+            text-decoration: none
+            color: $text-color-first
+            &:hover
+                color: $btn-color-red
+                transition: 0.5s                
