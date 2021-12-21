@@ -1,0 +1,332 @@
+@media (max-width: 1440px) 
+    .container
+        width: 90%
+    .logo
+        width: 250px
+    .header_navigation_menu
+        width: 400px
+        margin-left: 20px 
+        &_item
+            font-size: 16px 
+    .btn
+        width: 180px
+        height: 40px
+        font-size: 16px
+    .title
+        font-size: 30px
+    .description
+        &_wrapper
+            max-width: 532px
+            &_subtitle
+                font-size: 16px
+        &_text
+            font-size: 16px
+            height: 275px
+
+    //main-page
+    .info_wrapper_item
+        width: 530px
+    .info_descr_list_item
+        font-size: 16px
+    .prodacts_slider_cards_item
+        width: 530px
+    .partners_title
+        font-size: 24px
+    .partners_slider_cards_item
+        width: 300px
+        font-size: 16px
+        border-radius: 5px
+    
+    //page-2
+    .prodacts_slider_cards_item
+        width: 530px
+    .partners_title
+        font-size: 24px
+    .partners_slider_cards_item
+        width: 300px
+        font-size: 16px
+        border-radius: 5px
+    
+    
+@media (max-width: 1200px)
+    .logo
+        width: 160px
+    .header_navigation_menu
+        width: 375px
+        margin-left: 0px 
+    .btn
+        width: 160px
+        height: 35px
+        font-size: 14px
+    .header_navigation_btn
+        display: none
+    .header_navigation_phone_numbers_num
+        font-size: 14px
+    .title
+        font-size: 25px
+    .description
+        &_wrapper
+            max-width: 438px
+    .description_text
+        padding: 20px
+        font-size: 14px
+    
+    //main-page
+    .info_wrapper_item
+        width: 450px
+    .prodacts_slider_btns_prev_icon
+        width: 30px
+    .prodacts_slider_cards_item
+        width: 450px
+        border-radius: 5px
+        font-size: 16px
+    .partners_slider_btn_icon
+        width: 30px
+    .partners_slider_cards
+        width: 800px     
+        &_item
+            width: 260px
+
+    //page-2
+    .projects_list_item
+        width: 877px
+        &_text
+            font-size: 17px
+    .prodacts_list_item_menu
+        right: 94px
+        &_item_link
+            font-size: 18px
+    
+    //footer
+    .footer_info
+        &_title
+            font-size: 24px
+        &_text
+            font-size: 16px
+    .footer_workers
+        font-size: 16px
+
+@media (max-width: 991px)
+    .container
+        width: 95%
+    .header_navigation_menu
+        order: 3
+        flex-direction: column
+        width: 145px
+        align-items: flex-end
+        top: 55px
+        position: fixed
+        right: -100%
+        transition: 0.6s all
+        padding: 5px 20px 0px
+        &_active
+            right: 0
+        &_item
+            padding-right: 0
+            border: none
+            margin: 5px 0
+    .hamburger
+        display: block
+        width: 26px
+        height: 12px
+        right: 20px
+        span
+            display: block
+            height: 3px
+            width: 100%
+            background-color: #fff
+            margin-bottom: 2px
+            transition: 0.5s all
+        &_active
+            span
+                margin-bottom: -2px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(45deg)
+    .title
+        font-size: 20px
+    .description_wrapper
+        width: 364px
+        &_subtitle
+            font-size: 14px
+    .description_text
+        font-size: 13px
+        align-content: center
+        flex-basis: content
+        padding: 15px
+
+    //page-2
+    .projects_list_item
+        width: 729px
+    .prodacts_list_item
+        width: 665px
+        &_menu
+            right: 52px
+            width: 665px
+
+    //main-page
+    .info_descr_list_item
+        font-size: 14px
+    .prodacts_slider_cards_item 
+        width: 355px
+        font-size: 14px
+    .info_btns
+        flex-direction: column
+        &_more
+            margin-bottom: 20px
+    .partners_title
+        font-size: 14px
+    .partners_slider_cards
+        justify-content: space-around        
+        &_item        
+            width: 240px
+            font-size: 14px
+            &:last-child
+                display: none
+
+    //footer
+    .footer_info_text
+        font-size: 14px
+    .footer_workers
+        font-size: 14px
+    .developed
+        font-size: 14px
+
+@media (max-width: 767px)
+    .main_block
+        max-height: 100%
+        padding-bottom: 35px
+    .header
+        padding: 10px 0px 50px 0px
+    .header_navigation_menu
+        top: 35px
+    .description
+        flex-direction: column
+        justify-content: center
+        &_wrapper
+            width: 100%
+            margin: 0 auto
+            &_subtitle
+                text-align: center
+            &_btns
+                display: flex
+                justify-content: space-around
+    .title
+        text-align: center
+        margin-top: 0
+        margin-bottom: 10px
+    .description_wrapper_subtitle
+        margin-bottom: 10px
+    .description_text
+        padding: 5px
+        margin: 25px 0px
+    
+    //main-page
+    .info_block
+        padding: 40px 0px
+    .info_wrapper
+        flex-direction: column
+        margin: auto
+    .info_btns_contact
+        display: none
+    .prodacts_slider_btns
+        margin-bottom: 10px
+    .prodacts_slider_cards_item
+        margin: auto
+        padding: 20px
+        height: 220px
+    .partners_slider_cards_item
+        width: 250px
+        &:nth-child(2)
+            display: none
+    
+    //page-2
+    .projects_block
+        padding-top: 35px
+        padding-bottom: 35px
+    .projects_list_item
+        width: 540px
+        padding: 0px 20px
+        &_text
+            font-size: 14px
+    .arrow-icon
+        width: 80px
+    .prodacts_list_item
+        width: 485px
+        &_menu
+            right: 45px
+            width: 485px
+            &_item_link
+                font-size: 14px
+        &_link
+            font-size: 14px
+    .projects_btn
+        margin-top: 35px
+    
+    //footer
+    .footer
+        padding: 30px 0px
+    .footer_info > .title
+        text-align: start
+        font-size: 16px
+    .footer_info_text
+        font-size: 12px
+    .footer_workers
+        font-size: 12px
+    .developed
+        padding: 10px 0px
+        font-size: 12px
+
+@media (max-width: 575px)
+    .header
+        padding: 10px 0px 130px 0px
+        &_navigation_phone
+            display: none
+    .description
+        height: 100%
+
+    //main-page
+    .info_wrapper_item
+        width: auto
+    .info_btns
+        display: flex
+        flex-direction: row
+        justify-content: center
+        &_more
+            margin-right: 0
+    .prodacts_slider_cards_item
+        width: auto
+        padding: 10px
+        height: 200px
+    .partners_slider_cards_item
+        width: 225px
+    
+    //page-2
+    .projects_list_item
+        width: 304px
+        padding: 0px 5px
+        margin-bottom: 10px
+        &_text
+            font-size: 11px
+    .arrow-icon
+        width: 45px
+    .prodacts_list_item
+        width: 245px
+        margin-top: 10px
+        &_link
+            font-size: 11px
+            padding: 0px 5px
+        &_menu
+            right: 35px
+            width: 245px
+            &_item_link
+                font-size: 11px
+    
+    //footer
+    .footer_info_text
+        margin-bottom: 10px
+    .footer_workers_email
+        margin-bottom: 10px
