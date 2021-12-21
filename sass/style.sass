@@ -3,19 +3,27 @@
     box-sizing: border-box
 
 @import "variables"
+@import "_mixin"
+
+.container
+    +container-size
+
+.btn
+    +btn
+
+.arrow_btn
+    +arrow-btn
 
 //main_block
-.main_block
-    max-height: 100vh
-    min-width: 100%
+.main_block    
     background: url(../img/bg-main-page.png) no-repeat center
-    background-size: cover
+    +block-size
 
 .header
     padding-top: 30px
 
 .hamburger
-    display: none   
+    display: none
 
 .header_navigation
     display: flex
@@ -32,16 +40,12 @@
             font-style: normal
             font-weight: normal
             font-size: 20px
-            &:hover
-                color: $btn-color-red
-                transition: 0.5s
+            +text-hover
     &_btn
         &_red
             background-color: $btn-color-red
-            color: $text-color-first
             &:hover
                 background-color: $btn-color-dark-red
-                transition: 0.5s
 
     &_phone
         display: flex
@@ -54,9 +58,7 @@
             &_num
                 color: $text-color-first
                 text-decoration: none
-                &:hover
-                    color: $btn-color-red
-                    transition: 0.5s
+                +text-hover
 
 .title
     font-style: normal
@@ -82,13 +84,11 @@
         &_btns
             &_more
                 background-color: $btn-color-red
-                color: $text-color-first
                 margin-right: 15px
                 &:hover
                     background-color: $btn-color-dark-red                    
             &_contacts
                 background-color: $btn-color-grey
-                color: $text-color-first
                 &:hover
                     background-color: rgba(105, 105, 105, 1)
     &_text        
@@ -103,7 +103,6 @@
 
 //info_block
 .info_block
-    min-height: 100vh
     background: linear-gradient(180deg, rgba(22, 67, 78, 0.24) 72.4%, rgba(58, 93, 111, 0) 100%)
     padding: 80px 0px
 
@@ -121,11 +120,12 @@
                 padding-bottom: 15px
                 font-size: 20px
     &_btns
+        display: flex
+        justify-content: space-between
         &_more
             width: 280px
             height: 50px
             background-color: $btn-color-red
-            margin-right: 50px
             &:hover
                 background-color: $btn-color-dark-red
             &_link
@@ -137,7 +137,6 @@
             width: 280px
             height: 50px
             background-color: $btn-color-grey
-            color: $text-color-first
             &:hover
                 background-color: rgba(105, 105, 105, 1)
 
@@ -174,10 +173,11 @@
         justify-content: space-between
         &_cards
             display: flex
+            align-content: 
             margin-bottom: 80px
             margin-top: 35px  
             width: 1270px        
-            justify-content: space-between         
+            justify-content: space-between       
             &_item    
                 display: flex
                 align-items: center
@@ -229,9 +229,7 @@
             &_num
                 text-decoration: none
                 color: $text-color-first
-                &:hover
-                    color: $btn-color-red
-                    transition: 0.5s
+                +text-hover
         &_email
             margin-bottom: 35px
             &:last-child
@@ -253,9 +251,7 @@
         &_icon
             text-decoration: none
             color: $text-color-first
-            &:hover
-                color: $btn-color-red
-                transition: 0.5s
+            +text-hover
 
 
 //MEDIA
@@ -367,7 +363,7 @@
         right: 20px
         span
             display: block
-            height: 2px
+            height: 3px
             width: 100%
             background-color: #fff
             margin-bottom: 2px

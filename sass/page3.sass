@@ -3,11 +3,21 @@
     box-sizing: border-box
 
 @import "variables"
+@import "_mixin"
 
+.container
+    @include container-size
+
+.btn
+    @include btn
+
+.arrow_btn
+    @include arrow-btn
+
+//main_block
 .main_block
-    height: 100vh
     background: url(../img/bg-main-page3.png) no-repeat center
-    background-size: cover
+    @include block-size
 
 .header
     padding-top: 30px   
