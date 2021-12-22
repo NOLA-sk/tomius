@@ -3,24 +3,27 @@
     box-sizing: border-box
 
 @import "variables"
-@import "_mixin"
+@import "mixin"
 
 .container
-    @include container-size
+    +container-size
 
 .btn
-    @include btn
+    +btn
 
 .arrow_btn
-    @include arrow-btn
+    +arrow-btn
 
 //main_block
 .main_block
     background: url(../img/bg-main-page3.png) no-repeat center
-    @include block-size
+    +block-size
 
 .header
-    padding-top: 30px   
+    padding-top: 30px
+
+.hamburger
+    display: none
 
 .header_navigation
     display: flex
@@ -34,20 +37,13 @@
         &_item
             text-decoration: none
             color: $text-color-first
-            font-style: normal
-            font-weight: normal
             font-size: 20px
-            &:hover
-                color: $btn-color-red
-                transition: 0.5s
+            +text-hover
     &_btn
         &_red
             background-color: $btn-color-red
-            color: $text-color-first
             &:hover
                 background-color: $btn-color-dark-red
-                transition: 0.5s
-
     &_phone
         display: flex
         justify-content: space-between
@@ -59,40 +55,31 @@
             &_num
                 color: $text-color-first
                 text-decoration: none
-                &:hover
-                    color: $btn-color-red
-                    transition: 0.5s
+                +text-hover
 
-.description    
+.title
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    margin-bottom: 35px
+
+.about    
     height: 100vh
-    display: flex
-    flex-wrap: nowrap       
-    &_wrapper        
-        max-width: 1150px
-        display: flex
-        flex-direction: column
-        justify-content: center
-        color: $text-color-first
-        font-style: normal
-        &_title
-            font-weight: bold
-            font-size: 36px
-            margin-bottom: 35px
-        &_text
-            margin-bottom: 35px
-            font-size: 20px
-        &_btn
-            &_back
-                background-color: $btn-color-red
+    color: $text-color-first        
+    &_text
+        margin-bottom: 35px
+        font-size: 20px
+    &_btn
+        &_back
+            background-color: $btn-color-red
+            // margin-right: 15px
+            &:hover
+                background-color: $btn-color-dark-red        
+            &_link
+                text-decoration: none
                 color: $text-color-first
-                margin-right: 15px
                 &:hover
-                    background-color: $btn-color-dark-red        
-                &_link
-                    text-decoration: none
                     color: $text-color-first
-                    &:hover
-                        color: $text-color-first
 
 //info_block
 .info_block
@@ -119,18 +106,12 @@
             font-size: 20px
             width: 800px
             height: 60px
-            // position: relative
             background-color: #051C33
             border-radius: 5px
             padding: 0px 30px                
-            &:hover
-                color: $text-color-first
-                background-color: #15406b
-                transition: all 0.5s
-                box-shadow: 0 0 10px rgba(0,0,0,0.7)                    
+            +text-hover                   
         &_submenu
             display: none
-            // position: absolute
             top: auto
             right: 190px
             width: 800px
@@ -142,9 +123,7 @@
                 text-decoration: none
                 color: $text-color-first
                 font-size: 20px                
-                &:hover
-                    color: $btn-color-red
-                    transition: all 0.5s
+                +text-hover 
         
 .dropdawn_menu:hover > .dropdawn_menu_submenu
     display: block 
@@ -171,6 +150,8 @@
         font-weight: bold
         font-size: 36px
         margin-bottom: 35px
+    &_map_img
+        width: -webkit-fill-available
 
 //footer
 .footer_block
@@ -228,4 +209,6 @@
             color: $text-color-first
             &:hover
                 color: $btn-color-red
-                transition: 0.5s                
+                transition: 0.5s
+
+@import "media"
