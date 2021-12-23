@@ -69,26 +69,16 @@
     font-size: 20px
     color: $text-color-first
     margin-top: 80px
-    &_title
-        font-weight: bold
-        font-size: 36px
-        margin-bottom: 35px
-        color: $text-color-first
     &_descr
         margin-bottom: 35px
         &_link
             color: $text-color-first
-            &:hover
-                color: $btn-color-red
-                transition: 0.5s
+            +text-hover
 
-
-.title
+.table_title
     margin: 0 auto
-    font-weight: bold
-    font-size: 36px
-    margin-bottom: 35px
     color: $text-color-first
+    margin-bottom: 35px
 
 .white_bg
     background-color: #FFFFFF
@@ -115,8 +105,6 @@
     margin: 0 auto
     &_back
         background-color: $btn-color-red
-        color: $text-color-first
-        margin-right: 15px
         &:hover
             background-color: $btn-color-dark-red        
         &_link
@@ -131,6 +119,7 @@
 
 .scheme_title
     color: #000000
+    margin: 0 auto
 
 .shemes_pictures
     margin-bottom: 35px
@@ -176,9 +165,7 @@
             &_num
                 text-decoration: none
                 color: $text-color-first
-                &:hover
-                    color: $btn-color-red
-                    transition: 0.5s
+                +text-hover
         &_email
             margin-bottom: 35px
             &:last-child
@@ -200,6 +187,6 @@
         &_icon
             text-decoration: none
             color: $text-color-first
-            &:hover
-                color: $btn-color-red
-                transition: 0.5s
+            +text-hover
+
+@import "media"
