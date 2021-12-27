@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/page3.min.css">
     <title>ТомИУС-ПРОЕКТ</title>
+
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+        var map;
+    
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [56.456087, 84.954538],
+                zoom: 16
+            });
+            DG.marker([56.456087, 84.954538]).addTo(map).bindPopup('ООО "ТомИУС-Проект" научно-производственное предприятие');;
+        });
+    </script>
+    
 </head>
 <body>
     <div class="main_block">
@@ -119,7 +133,7 @@
                 </div>
 
                 <div class="address_map">
-                    <img src="./img/map.png" alt="map" class="address_map_img">
+                    <div id="map" class="address_map_img"></div>
                 </div>
             </div>
 
@@ -221,7 +235,7 @@
         </footer>
     </div>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/bundle.js"></script>
 
 </body>
 </html>

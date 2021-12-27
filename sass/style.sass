@@ -68,6 +68,7 @@
     display: flex
     flex-wrap: nowrap
     justify-content: space-between
+    text-align: justify
     &_wrapper        
         max-width: 725px
         display: flex
@@ -87,6 +88,11 @@
                 background-color: $btn-color-grey
                 &:hover
                     background-color: rgba(105, 105, 105, 1)
+                &_btn
+                    text-decoration: none
+                    color: $text-color-first
+                    &:hover
+                        color: $text-color-first
     &_text        
         height: 265px
         max-width: 712px
@@ -96,6 +102,16 @@
         padding: 30px
         font-size: 20px
         flex-basis: content
+        +fade
+
+.fade
+    animation-name: fade
+    animation-duration: 1.5s
+
+.show
+    display: block
+.hide
+    display: none
 
 //info_block
 .info_block
@@ -138,22 +154,28 @@
 
 .prodacts
     &_slider
+        position: relative
         &_btns
             display: flex
             justify-content: flex-end
             margin-bottom: 35px
-        &_cards
-            &_item
+        &_wrapper            
+            overflow: hidden
+            width: 620px
+            height: 250px
+            &_cards
                 display: flex
-                align-items: center
-                padding: 45px
-                width: 620px
-                height: 250px
-                background: url(../img/slider-cards-prodacts.png) no-repeat center
-                border-radius: 5px
-                font-size: 20px
-                text-align: center
-                color: $text-color-first
+                transition: 0.5s all
+                &_item
+                    display: flex
+                    align-items: center
+                    padding: 45px
+                    height: 250px
+                    background: url(../img/slider-cards-prodacts.png) no-repeat center
+                    border-radius: 5px
+                    font-size: 20px
+                    text-align: center
+                    color: $text-color-first
 
 //partners_block
 .partners_block
