@@ -28,8 +28,10 @@
         width: 530px
     .info_descr_list_item
         font-size: 16px
-    .prodacts_slider_cards_item
+    .prodacts_slider_wrapper
         width: 530px
+        &_cards_item
+            width: 530px
     .partners_title
         font-size: 24px
     .partners_slider_cards_item
@@ -83,12 +85,14 @@
     //main-page
     .info_wrapper_item
         width: 450px
+    .prodacts_slider_wrapper
+        width: 450px
+        &_cards_item
+            width: 450px
+            border-radius: 5px
+            font-size: 16px
     .prodacts_slider_btns_prev_icon
         width: 30px
-    .prodacts_slider_cards_item
-        width: 450px
-        border-radius: 5px
-        font-size: 16px
     .partners_slider_btn_icon
         width: 30px
     .partners_slider_cards
@@ -195,9 +199,11 @@
         padding-bottom: 35px
     .info_descr_list_item
         font-size: 14px
-    .prodacts_slider_cards_item 
-        width: 355px
-        font-size: 14px
+    .prodacts_slider_wrapper
+            width: 355px
+            &_cards_item
+                width: 355px
+                font-size: 14px
     .info_btns
         flex-direction: column
         &_more
@@ -308,10 +314,11 @@
         display: none
     .prodacts_slider_btns
         margin-bottom: 10px
-    .prodacts_slider_cards_item
+    .prodacts_slider_wrapper
         margin: auto
-        padding: 20px
-        height: 220px
+        &_cards_item
+            padding: 20px
+            height: 220px
     .partners_slider_cards_item
         width: 250px
         &:nth-child(2)
@@ -347,7 +354,6 @@
             text-align: center
         &_btn
             margin-top: 35px
-    /* margin-top: 80px;
     .dropdawn_menu_link
         width: 470px
         padding: 0px 10px
@@ -397,12 +403,13 @@
         justify-content: center
         &_more
             margin-right: 0
-    .prodacts_slider_cards_item
-        width: auto
-        padding: 10px
-        height: 200px
+    .prodacts_slider_wrapper
+        width: 300px
+        &_cards_item
+            padding: 10px
+            height: 200px        
     .partners_slider_cards_item
-        width: 225px
+        width: 225px              
     
     //page-2
     .projects_list_item
