@@ -184,29 +184,46 @@
 .partners
     &_title
         font-weight: bold
-        font-size: 30px
+        font-size: 30px    
     &_slider
         display: flex
         flex-direction: row
         justify-content: space-between
-        &_cards
-            display: flex
-            align-content: 
-            margin-bottom: 80px
-            margin-top: 35px  
-            width: 1270px        
-            justify-content: space-between       
-            &_item    
+        &_wrapper
+            overflow: hidden
+            // width: 1270px 
+            &_cards
                 display: flex
-                align-items: center
-                justify-content: center            
-                width: 360px
-                height: 180px
-                font-weight: bold
-                font-size: 24px
-                text-align: center
-                color: $text-color-first
-                padding: 15px
+                align-content: 
+                margin-bottom: 80px
+                margin-top: 35px  
+                justify-content: space-around 
+                transition: 0.5s all
+                &_item    
+                    display: flex
+                    align-items: center
+                    justify-content: center            
+                    width: 360px
+                    height: 180px
+                    color: $text-color-first
+                    font-weight: bold
+                    font-size: 24px
+                    text-align: center                    
+                    padding: 15px
+                    border-radius: 5px
+                    &:hover
+                        transition: all 0.5s
+                        transform: scale(1.1)
+                        box-shadow: 0 0 20px rgba(12, 37, 51 ,0.7)
+                    &_link
+                        text-decoration: none
+                        color: $text-color-first
+                        &:hover
+                            color: rgb(61, 149, 199)
+                            transition: 0.5s
+
+.first_slider_wrapper, .second_slider_wrapper, .third_slider_wrapper
+    width: 1270px 
 
 .tomsk_partners
     background: url(../img/bg-slider-tomsk.png) no-repeat center

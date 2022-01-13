@@ -49,6 +49,79 @@ function showMoreDescr() {
 
 /***/ }),
 
+/***/ "./js/modules/sliders.js":
+/*!*******************************!*\
+  !*** ./js/modules/sliders.js ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function sliders(_ref) {
+  let {
+    slide,
+    prevArrow,
+    nextArrow,
+    wrapper,
+    field
+  } = _ref;
+  const slides = document.querySelectorAll(slide);
+  const prevBtn = document.querySelector(prevArrow);
+  const nextBtn = document.querySelector(nextArrow);
+  const sliderWrapper = document.querySelector(wrapper);
+  const slidesField = document.querySelector(field);
+  const width = window.getComputedStyle(sliderWrapper).width;
+  let offset = 0;
+  let slideIndex = 3; // console.log(slides);
+
+  slidesField.style.width = 33.333333 * slides.length + '%';
+
+  function deleteNotDigits(str) {
+    return +str.replace(/\D/g, '');
+  }
+
+  slides.forEach(slide => {
+    slide.style.width = deleteNotDigits(width);
+  });
+
+  function currentSlide(width) {
+    if (offset == deleteNotDigits(width) * (slides.length - 3)) {
+      offset = 0;
+    } else {
+      offset += deleteNotDigits(width);
+    }
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide(width);
+    console.log(offset);
+    slidesField.style.transform = `translateX(-${offset / 3}px)`; // if(slideIndex == slides.length) {
+    //     slideIndex = 3;
+    //     console.log(slideIndex);
+    // }
+    // else {
+    //     slideIndex ++;
+    //     console.log(slideIndex);
+    // }        
+  });
+  prevBtn.addEventListener('click', () => {
+    currentSlide(width);
+    console.log(offset);
+    slidesField.style.transform = `translateX(-${offset / 3}px)`; // if(slideIndex == 3) {
+    //     slideIndex = slides.length;
+    //     console.log(slideIndex);
+    // }
+    // else {
+    //     slideIndex --;
+    //     console.log(slideIndex);
+    // }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (sliders);
+
+/***/ }),
+
 /***/ "./js/modules/tabs.js":
 /*!****************************!*\
   !*** ./js/modules/tabs.js ***!
@@ -66,6 +139,7 @@ function tabs() {
   const width = window.getComputedStyle(sliderWrapper).width;
   let offset = 0;
   let slideIndex = 1;
+  console.log(width);
   slidesField.style.width = 100 * slides.length + '%';
   slides.forEach(slide => {
     slide.style.width = width;
@@ -1403,7 +1477,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu */ "./js/modules/menu.js");
 /* harmony import */ var _modules_more_btn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/more-btn */ "./js/modules/more-btn.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
+/* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/sliders */ "./js/modules/sliders.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
+
 
 
 
@@ -1413,6 +1489,27 @@ document.addEventListener('DOMContentLoaded', () => {
   (0,_modules_menu__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_more_btn__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
+    slide: '.first_slider_item',
+    prevArrow: '.first_prev_btn',
+    nextArrow: '.first_next_btn',
+    wrapper: '.first_slider_wrapper',
+    field: '.first_slider_field'
+  });
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
+    slide: '.second_slider_item',
+    prevArrow: '.second_prev_btn',
+    nextArrow: '.second_next_btn',
+    wrapper: '.second_slider_wrapper',
+    field: '.second_slider_field'
+  });
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
+    slide: '.third_slider_item',
+    prevArrow: '.third_prev_btn',
+    nextArrow: '.third_next_btn',
+    wrapper: '.third_slider_wrapper',
+    field: '.third_slider_field'
+  });
 });
 }();
 /******/ })()

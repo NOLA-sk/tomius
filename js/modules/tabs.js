@@ -7,6 +7,7 @@ function tabs() {
     const width = window.getComputedStyle(sliderWrapper).width;
     let offset = 0;
     let slideIndex = 1;
+    console.log(width);
 
     slidesField.style.width = 100 * slides.length + '%';
 
