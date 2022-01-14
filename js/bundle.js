@@ -72,9 +72,20 @@ function sliders(_ref) {
   const slidesField = document.querySelector(field);
   const width = window.getComputedStyle(sliderWrapper).width;
   let offset = 0;
-  let slideIndex = 3; // console.log(slides);
+  let countSlides = 0;
 
-  slidesField.style.width = 33.333333 * slides.length + '%';
+  if (width > '460px') {
+    slidesField.style.width = 33.333333 * slides.length + '%';
+    countSlides = 3;
+  } else {
+    if (width <= '460px' && width > '300px') {
+      slidesField.style.width = 50 * slides.length + '%';
+      countSlides = 2;
+    } else {
+      slidesField.style.width = 100 * slides.length + '%';
+      countSlides = 1;
+    }
+  }
 
   function deleteNotDigits(str) {
     return +str.replace(/\D/g, '');
@@ -83,38 +94,23 @@ function sliders(_ref) {
   slides.forEach(slide => {
     slide.style.width = deleteNotDigits(width);
   });
-
-  function currentSlide(width) {
-    if (offset == deleteNotDigits(width) * (slides.length - 3)) {
+  nextBtn.addEventListener('click', () => {
+    if (offset == deleteNotDigits(width) * (slides.length - countSlides)) {
       offset = 0;
     } else {
       offset += deleteNotDigits(width);
     }
-  }
 
-  nextBtn.addEventListener('click', () => {
-    currentSlide(width);
-    console.log(offset);
-    slidesField.style.transform = `translateX(-${offset / 3}px)`; // if(slideIndex == slides.length) {
-    //     slideIndex = 3;
-    //     console.log(slideIndex);
-    // }
-    // else {
-    //     slideIndex ++;
-    //     console.log(slideIndex);
-    // }        
+    slidesField.style.transform = `translateX(-${offset / countSlides}px)`;
   });
   prevBtn.addEventListener('click', () => {
-    currentSlide(width);
-    console.log(offset);
-    slidesField.style.transform = `translateX(-${offset / 3}px)`; // if(slideIndex == 3) {
-    //     slideIndex = slides.length;
-    //     console.log(slideIndex);
-    // }
-    // else {
-    //     slideIndex --;
-    //     console.log(slideIndex);
-    // }
+    if (offset == 0) {
+      offset = deleteNotDigits(width) * (slides.length - countSlides);
+    } else {
+      offset -= deleteNotDigits(width);
+    }
+
+    slidesField.style.transform = `translateX(-${offset / countSlides}px)`;
   });
 }
 
@@ -138,7 +134,6 @@ function tabs() {
   const slidesField = document.querySelector('.prodacts_slider_wrapper_cards');
   const width = window.getComputedStyle(sliderWrapper).width;
   let offset = 0;
-  let slideIndex = 1;
   console.log(width);
   slidesField.style.width = 100 * slides.length + '%';
   slides.forEach(slide => {
@@ -149,33 +144,23 @@ function tabs() {
     return +str.replace(/\D/g, '');
   }
 
-  function currentSlide(width) {
+  nextBtn.addEventListener('click', () => {
     if (offset == deleteNotDigits(width) * (slides.length - 1)) {
       offset = 0;
     } else {
-      offset = offset + deleteNotDigits(width);
+      offset += deleteNotDigits(width);
     }
-  }
 
-  nextBtn.addEventListener('click', () => {
-    currentSlide(width);
     slidesField.style.transform = `translateX(-${offset}px)`;
-
-    if (slideIndex == slides.length) {
-      slideIndex = 1;
-    } else {
-      slideIndex++;
-    }
   });
   prevBtn.addEventListener('click', () => {
-    currentSlide(width);
-    slidesField.style.transform = `translateX(-${offset}px)`;
-
-    if (slideIndex == 1) {
-      slideIndex = slides.length;
+    if (offset == 0) {
+      offset = deleteNotDigits(width) * (slides.length - 1);
     } else {
-      slideIndex--;
+      offset -= deleteNotDigits(width);
     }
+
+    slidesField.style.transform = `translateX(-${offset}px)`;
   });
 }
 

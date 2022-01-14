@@ -6,7 +6,6 @@ function tabs() {
     const slidesField = document.querySelector('.prodacts_slider_wrapper_cards');
     const width = window.getComputedStyle(sliderWrapper).width;
     let offset = 0;
-    let slideIndex = 1;
     console.log(width);
 
     slidesField.style.width = 100 * slides.length + '%';
@@ -19,39 +18,24 @@ function tabs() {
         return +str.replace(/\D/g, '');
     }
 
-    function currentSlide(width) {
+    nextBtn.addEventListener('click', () => {
         if(offset == deleteNotDigits(width)*(slides.length-1)) {
             offset = 0;
         }
         else {
-            offset = offset + deleteNotDigits(width);
+            offset += deleteNotDigits(width);
         }
-    }
-
-    nextBtn.addEventListener('click', () => {
-        currentSlide(width);
-
         slidesField.style.transform = `translateX(-${offset}px)`;
-
-        if(slideIndex == slides.length) {
-            slideIndex = 1;
-        }
-        else {
-            slideIndex ++;
-        }
     });
 
     prevBtn.addEventListener('click', () => {
-        currentSlide(width);
-
-        slidesField.style.transform = `translateX(-${offset}px)`;
-
-        if(slideIndex == 1) {
-            slideIndex = slides.length;
+        if(offset == 0) {
+            offset = deleteNotDigits(width)*(slides.length-1);
         }
         else {
-            slideIndex --;
+            offset -= deleteNotDigits(width);
         }
+        slidesField.style.transform = `translateX(-${offset}px)`;
     });
 }
 

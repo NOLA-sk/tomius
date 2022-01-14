@@ -163,6 +163,9 @@
             overflow: hidden
             width: 620px
             height: 250px
+            &:hover
+                transition: all 0.3s
+                box-shadow: 0 0 20px rgba(12, 37, 51 ,0.7)
             &_cards
                 display: flex
                 transition: 0.5s all
@@ -175,7 +178,7 @@
                     border-radius: 5px
                     font-size: 20px
                     text-align: center
-                    color: $text-color-first
+                    color: $text-color-first                    
 
 //partners_block
 .partners_block
@@ -191,7 +194,6 @@
         justify-content: space-between
         &_wrapper
             overflow: hidden
-            // width: 1270px 
             &_cards
                 display: flex
                 align-content: 
@@ -212,7 +214,7 @@
                     padding: 15px
                     border-radius: 5px
                     &:hover
-                        transition: all 0.5s
+                        transition: all 0.3s
                         transform: scale(1.1)
                         box-shadow: 0 0 20px rgba(12, 37, 51 ,0.7)
                     &_link

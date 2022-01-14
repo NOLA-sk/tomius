@@ -28,13 +28,11 @@
         width: 530px
     .info_descr_list_item
         font-size: 16px
-    .prodacts_slider_wrapper
-        width: 530px
-        &_cards_item
-            width: 530px
+    .first_slider_wrapper, .second_slider_wrapper, .third_slider_wrapper
+        width: 970px
     .partners_title
         font-size: 24px
-    .partners_slider_cards_item
+    .partners_slider_wrapper_cards_item
         width: 300px
         font-size: 16px
         border-radius: 5px
@@ -95,10 +93,12 @@
         width: 30px
     .partners_slider_btn_icon
         width: 30px
-    .partners_slider_cards
+    .first_slider_wrapper, .second_slider_wrapper, .third_slider_wrapper
+        width: 800px  
+    .partners_slider_wrapper_cards
         width: 800px     
         &_item
-            width: 260px
+            width: 260px    
 
     //page-2
     .projects_list_item
@@ -210,13 +210,19 @@
             margin-bottom: 20px
     .partners_title
         font-size: 14px
-    .partners_slider_cards
+    .first_slider_wrapper, .second_slider_wrapper, .third_slider_wrapper
+        width: 620px
+    .partners_slider_wrapper_cards
         justify-content: space-around        
         &_item        
-            width: 240px
+            width: 200px
+            height: 150px
             font-size: 14px
-            &:last-child
-                display: none
+            padding: 10px
+            -webkit-hyphens: manual
+            -moz-hyphens: manual
+            -ms-hyphens: manual
+            hyphens: manual
 
     //page-2
     .projects_block
@@ -319,10 +325,11 @@
         &_cards_item
             padding: 20px
             height: 220px
-    .partners_slider_cards_item
-        width: 250px
-        &:nth-child(2)
-            display: none
+    .first_slider_wrapper, .second_slider_wrapper, .third_slider_wrapper
+        width: 460px
+    .partners_slider_wrapper_cards_item
+            width: 215px
+            font-size: 14px
     
     //page-2
     .projects_block
@@ -402,14 +409,16 @@
         flex-direction: row
         justify-content: center
         &_more
-            margin-right: 0
+            margin-right: 0    
     .prodacts_slider_wrapper
         width: 300px
         &_cards_item
             padding: 10px
-            height: 200px        
-    .partners_slider_cards_item
-        width: 225px              
+            height: 200px
+    .first_slider_wrapper, .second_slider_wrapper, .third_slider_wrapper
+        width: 300px
+    .partners_slider_wrapper_cards_item
+        width: 175px
     
     //page-2
     .projects_list_item
