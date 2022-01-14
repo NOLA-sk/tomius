@@ -8,12 +8,12 @@ function sliders({slide, prevArrow, nextArrow, wrapper, field}) {
     let offset = 0;
     let countSlides = 0;
 
-    if(width > '460px') {
+    if(deleteNotDigits(width) > 460) {
         slidesField.style.width = 33.333333 * slides.length + '%';
         countSlides = 3;        
     }
     else {
-        if(width <= '460px' && width > '300px') {
+        if(deleteNotDigits(width) <= 460 && deleteNotDigits(width) > 300) {
             slidesField.style.width = 50 * slides.length + '%';
             countSlides = 2;
         }
