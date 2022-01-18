@@ -1,6 +1,34 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/modules/dropdown.js":
+/*!********************************!*\
+  !*** ./js/modules/dropdown.js ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function dropdown() {
+  const btn = document.querySelector('.dropdown_menu_btn');
+  const submenu = document.querySelector('.dropdown_menu_submenu');
+  const dropdown = document.querySelector('.dropdown'); // const mrBottom = window.getComputedStyle(dropdown).marginBottom;
+  // function deleteNotDigits(str) {
+  //     return +str.replace(/\D/g, '');
+  // } 
+
+  btn.addEventListener('click', () => {
+    submenu.classList.toggle('dropdown_active');
+    dropdown.classList.toggle('dropdown_bottom'); // if(deleteNotDigits(mrBottom) == 35) {
+    //     dropdown.style.marginBottom = '190px';
+    // }       
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (dropdown);
+
+/***/ }),
+
 /***/ "./js/modules/menu.js":
 /*!****************************!*\
   !*** ./js/modules/menu.js ***!
@@ -1463,7 +1491,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_more_btn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/more-btn */ "./js/modules/more-btn.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/sliders */ "./js/modules/sliders.js");
+/* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/dropdown */ "./js/modules/dropdown.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
+
 
 
 
@@ -1472,29 +1502,36 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('DOMContentLoaded', () => {
   (0,_modules_menu__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_more_btn__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
-    slide: '.first_slider_item',
-    prevArrow: '.first_prev_btn',
-    nextArrow: '.first_next_btn',
-    wrapper: '.first_slider_wrapper',
-    field: '.first_slider_field'
-  });
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
-    slide: '.second_slider_item',
-    prevArrow: '.second_prev_btn',
-    nextArrow: '.second_next_btn',
-    wrapper: '.second_slider_wrapper',
-    field: '.second_slider_field'
-  });
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
-    slide: '.third_slider_item',
-    prevArrow: '.third_prev_btn',
-    nextArrow: '.third_next_btn',
-    wrapper: '.third_slider_wrapper',
-    field: '.third_slider_field'
-  });
+
+  if (document.querySelector('#main-page')) {
+    (0,_modules_more_btn__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
+      slide: '.first_slider_item',
+      prevArrow: '.first_prev_btn',
+      nextArrow: '.first_next_btn',
+      wrapper: '.first_slider_wrapper',
+      field: '.first_slider_field'
+    });
+    (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
+      slide: '.second_slider_item',
+      prevArrow: '.second_prev_btn',
+      nextArrow: '.second_next_btn',
+      wrapper: '.second_slider_wrapper',
+      field: '.second_slider_field'
+    });
+    (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])({
+      slide: '.third_slider_item',
+      prevArrow: '.third_prev_btn',
+      nextArrow: '.third_next_btn',
+      wrapper: '.third_slider_wrapper',
+      field: '.third_slider_field'
+    });
+  }
+
+  if (document.querySelector('#about-comp')) {
+    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  }
 });
 }();
 /******/ })()

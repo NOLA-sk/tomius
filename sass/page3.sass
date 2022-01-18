@@ -98,11 +98,12 @@
 .info_text
     margin-bottom: 35px
 
-.dropdawn
+.dropdown
     margin: 0 auto
     margin-bottom: 35px
+    transition: 0.5s all
     &_menu
-        &_link
+        &_btn
             display: flex       
             justify-content: space-between
             align-items: center         
@@ -113,26 +114,33 @@
             width: 800px
             height: 60px
             background-color: #051C33
+            border: none
             border-radius: 5px
             padding: 0px 30px                
-            +text-hover                   
+            +text-hover
+            +text-focus
         &_submenu
-            display: none
-            top: auto
-            right: 190px
             width: 800px
             background-color: #051C33
             border-radius: 5px
             padding: 0px 30px
             margin-bottom: 35px
+            position: absolute
+            visibility: hidden
+            opacity: 0
             &_item
                 text-decoration: none
                 color: $text-color-first
                 font-size: 20px                
-                +text-hover 
-        
-.dropdawn_menu:hover > .dropdawn_menu_submenu
-    display: block 
+                +text-hover
+
+.dropdown_active
+    visibility: visible
+    opacity: 1
+    transition: opacity 0.5s
+
+.dropdown_bottom
+    margin-bottom: 190px
 
 .info_btn
     margin: 0 auto
