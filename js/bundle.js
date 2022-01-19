@@ -9,19 +9,20 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function dropdown() {
-  const btn = document.querySelector('.dropdown_menu_btn');
-  const submenu = document.querySelector('.dropdown_menu_submenu');
-  const dropdown = document.querySelector('.dropdown'); // const mrBottom = window.getComputedStyle(dropdown).marginBottom;
-  // function deleteNotDigits(str) {
-  //     return +str.replace(/\D/g, '');
-  // } 
-
+function dropdown(_ref) {
+  let {
+    menuBtn,
+    dropdownSubmenu,
+    container,
+    cssClass
+  } = _ref;
+  const btn = document.querySelector(menuBtn);
+  const submenu = document.querySelector(dropdownSubmenu);
+  const dropdownMenu = document.querySelector(container);
+  const mb = cssClass;
   btn.addEventListener('click', () => {
     submenu.classList.toggle('dropdown_active');
-    dropdown.classList.toggle('dropdown_bottom'); // if(deleteNotDigits(mrBottom) == 35) {
-    //     dropdown.style.marginBottom = '190px';
-    // }       
+    dropdownMenu.classList.toggle(mb);
   });
 }
 
@@ -1530,7 +1531,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.querySelector('#about-comp')) {
-    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_5__["default"])();
+    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_5__["default"])({
+      menuBtn: '.dropdown_menu_btn',
+      dropdownSubmenu: '.dropdown_menu_submenu',
+      container: '.dropdown',
+      cssClass: 'dropdown_bottom'
+    });
+  }
+
+  if (document.querySelector('#projects')) {
+    (0,_modules_more_btn__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_5__["default"])({
+      menuBtn: '.dropdown_btn_1',
+      dropdownSubmenu: '.dropdown_submenu_1',
+      container: '.dropdown_1',
+      cssClass: 'dropdown_bottom_1'
+    });
+    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_5__["default"])({
+      menuBtn: '.dropdown_btn_2',
+      dropdownSubmenu: '.dropdown_submenu_2',
+      container: '.dropdown_2',
+      cssClass: 'dropdown_bottom_2'
+    });
+    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_5__["default"])({
+      menuBtn: '.dropdown_btn_3',
+      dropdownSubmenu: '.dropdown_submenu_3',
+      container: '.dropdown_3',
+      cssClass: 'dropdown_bottom_3'
+    });
+    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_5__["default"])({
+      menuBtn: '.dropdown_btn_4',
+      dropdownSubmenu: '.dropdown_submenu_4',
+      container: '.dropdown_4',
+      cssClass: 'dropdown_bottom_4'
+    });
   }
 });
 }();

@@ -11,7 +11,7 @@
     <title>ТомИУС-ПРОЕКТ</title>
 </head>
 <body>
-    <div class="main_block">
+    <div class="main_block" id="projects">
         <div class="container">            
             <div class="header">
                 <header class="header_navigation">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="description_wrapper">
-                    <div class="description_text">
+                    <div class="description_text hiden_text hide fade">
                         <span>
                             Проектирование программного обеспечения систем выполняется с помощью инструментальных средств современной российской SCADA-системы TRACE MODE, что обеспечивает высокий уровень эксплуатационных характеристик, документирования системных функций, технических и программных решений, надежности и гибкости. Решения в части технического обеспечения систем основываются на применении PC-совместимых (PC-based) промышленных контроллеров и компьютеров, работающих под управлением операционных систем Linux и DOS, а также операционной системы MS Windows, устанавливаемой на компьютерах операторских станций. В целом используемые нами подходы и принципы проектирования позволяют достичь высокой эффективности систем по стоимости, надежности, ремонтопригодности и срокам внедрения по сравнению с системами, полностью построенными на основе средств автоматизации зарубежных производителей.
                         </span> 
@@ -86,46 +86,36 @@
             </div>
             <div class="projects_list">
                 <div class="projects_list_item">
-                    <div class="projects_list_item_text">
-                        Система управления процессом подготовки рабочей камеры установки токамак к экспериментам (СУТП) 
-                    </div>
-                    <a href="page4.html" class="projects_list_link">
+                    <a href="page4.html" class="projects_list_item_link">
+                        <div>Система управления процессом подготовки рабочей камеры установки токамак к экспериментам (СУТП)</div>
                         <img src="./icons/arrow-icon.svg" alt="arrow-icon" class="arrow-icon">
                     </a>
                 </div>
 
                 <div class="projects_list_item">
-                    <div class="projects_list_item_text">
-                        Автоматизированная система управления технологическим процессом сахарного завода (АСУ ТП) 
-                    </div>
-                    <a href="page4.html" class="projects_list_link">
+                    <a href="page4.html" class="projects_list_item_link">
+                        <div>Система управления процессом подготовки рабочей камеры установки токамак к экспериментам (СУТП)</div>
                         <img src="./icons/arrow-icon.svg" alt="arrow-icon" class="arrow-icon">
                     </a>
                 </div>
 
                 <div class="projects_list_item">
-                    <div class="projects_list_item_text">
-                        Автоматизированная система управления технологическим процессом птицефабрики (АСУ ТП)
-                    </div>
-                    <a href="page4.html" class="projects_list_link">
+                    <a href="page4.html" class="projects_list_item_link">
+                        <div>Автоматизированная система управления технологическим процессом птицефабрики (АСУ ТП)</div>
                         <img src="./icons/arrow-icon.svg" alt="arrow-icon" class="arrow-icon">
                     </a>
                 </div>
 
                 <div class="projects_list_item">
-                    <div class="projects_list_item_text">
-                        Функциональные возможности АСУ процессом синтеза глиоксаля 
-                    </div>
-                    <a href="page4.html" class="projects_list_link">
-                        <img src="./icons/arrow-icon.svg" alt="arrow-icon" class="arrow-icon">
+                    <a href="page4.html" class="projects_list_item_link">
+                        <div>Функциональные возможности АСУ процессом синтеза глиоксаля</div>
+                        <img src="./icons/arrow-icon.svg" alt="arrow-icon" class="arrow-icon">   
                     </a>
                 </div>
 
                 <div class="projects_list_item">
-                    <div class="projects_list_item_text">
-                        Система автоматизации экспериментов электрофизической установки токамак (САЭ) 
-                    </div>
-                    <a href="page4.html" class="projects_list_link">
+                    <a href="page4.html" class="projects_list_item_link">
+                        <div>Система автоматизации экспериментов электрофизической установки токамак (САЭ)</div>
                         <img src="./icons/arrow-icon.svg" alt="arrow-icon" class="arrow-icon">
                     </a>
                 </div>
@@ -136,14 +126,14 @@
             </div>
             <div class="prodacts">                
                 
-                <ul class="prodacts_list">
-                    <li class="prodacts_list_item">
-                        <a href="#" class="prodacts_list_item_link">
+                <div class="prodacts_list">
+                    <div class="prodacts_list_item dropdown_1">
+                        <button class="prodacts_list_item_btn dropdown_btn_1">
                             Электронные модули
                             <img src="./icons/triangle.svg" alt="triangle" class="prodacts_list_item_icon">
-                        </a>
+                        </button>
 
-                        <ul class="prodacts_list_item_menu">
+                        <ul class="prodacts_list_item_menu dropdown_submenu_1">
                             <li class="prodacts_list_item_menu_item">
                                 <a href="page4.html" class="prodacts_list_item_menu_item_link">
                                 Локальный модуль синхронизации (ЛМС)
@@ -204,14 +194,14 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </div>
 
-                    <li class="prodacts_list_item">
-                        <a href="#" class="prodacts_list_item_link">Электронные устройства
+                    <div class="prodacts_list_item dropdown_2">
+                        <button class="prodacts_list_item_btn dropdown_btn_2">Электронные устройства
                             <img src="./icons/triangle.svg" alt="triangle" class="prodacts_list_item_icon">
-                        </a>                        
+                        </button>                        
 
-                        <ul class="prodacts_list_item_menu">
+                        <ul class="prodacts_list_item_menu dropdown_submenu_2">
                             <li class="prodacts_list_item_menu_item">
                                 <a href="page4.html" class="prodacts_list_item_menu_item_link">
                                 Преобразователь ток-напряжение (ПСТН-16к-01
@@ -248,14 +238,14 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </div>
 
-                    <li class="prodacts_list_item">
-                        <a href="#" class="prodacts_list_item_link">Электронные блоки
+                    <div class="prodacts_list_item dropdown_3">
+                        <button class="prodacts_list_item_btn dropdown_btn_3">Электронные блоки
                             <img src="./icons/triangle.svg" alt="triangle" class="prodacts_list_item_icon">
-                        </a>
+                        </button>
 
-                        <ul class="prodacts_list_item_menu">
+                        <ul class="prodacts_list_item_menu dropdown_submenu_3">
                             <li class="prodacts_list_item_menu_item">
                                 <a href="page4.html" class="prodacts_list_item_menu_item_link">
                                     Логическое переключающее устройство (ЛПУ-24)
@@ -310,14 +300,14 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </div>
                     
-                    <li class="prodacts_list_item">
-                        <a href="#" class="prodacts_list_item_link">Шкафы для размещения устройств автоматики
+                    <div class="prodacts_list_item dropdown_4">
+                        <button class="prodacts_list_item_btn dropdown_btn_4">Шкафы для размещения устройств автоматики
                             <img src="./icons/triangle.svg" alt="triangle" class="prodacts_list_item_icon">
-                        </a>
+                        </button>
 
-                        <ul class="prodacts_list_item_menu">
+                        <ul class="prodacts_list_item_menu dropdown_submenu_4">
                             <li class="prodacts_list_item_menu_item">
                                 <a href="page4.html" class="prodacts_list_item_menu_item_link">
                                     Устройство управления и контроля температуры (УПКТ-6-80)
@@ -378,14 +368,14 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                </ul>                
+                    </div>
+                </div>                
 
             </div>
 
-            <div class="projects_btn">
-                <button class="projects_btn_back btn">
-                    <a href="index.html" class="projects_btn_back_link">
+            <div class="btn-wrapper">
+                <button class="btn-wrapper_back btn">
+                    <a href="index.html" class="btn-wrapper_back_link">
                         Назад
                     </a>
                 </button>

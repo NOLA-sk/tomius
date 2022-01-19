@@ -35,7 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     if(document.querySelector('#about-comp')) {
-        dropdown();
-    }    
+        dropdown({
+            menuBtn: '.dropdown_menu_btn',
+            dropdownSubmenu: '.dropdown_menu_submenu',
+            container: '.dropdown',
+            cssClass:'dropdown_bottom'
+        });
+    }
+    if(document.querySelector('#projects')) {
+        showMoreDescr();
+        dropdown({
+            menuBtn: '.dropdown_btn_1',
+            dropdownSubmenu: '.dropdown_submenu_1',
+            container: '.dropdown_1',
+            cssClass:'dropdown_bottom_1'
+        });
+        dropdown({
+            menuBtn: '.dropdown_btn_2',
+            dropdownSubmenu: '.dropdown_submenu_2',
+            container: '.dropdown_2',
+            cssClass:'dropdown_bottom_2'
+        });
+        dropdown({
+            menuBtn: '.dropdown_btn_3',
+            dropdownSubmenu: '.dropdown_submenu_3',
+            container: '.dropdown_3',
+            cssClass:'dropdown_bottom_3'
+        });
+        dropdown({
+            menuBtn: '.dropdown_btn_4',
+            dropdownSubmenu: '.dropdown_submenu_4',
+            container: '.dropdown_4',
+            cssClass:'dropdown_bottom_4'
+        });
+    }
 });
 
