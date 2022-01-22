@@ -6,6 +6,7 @@ import showMoreDescr from './modules/more-btn';
 import tabs from './modules/tabs';
 import sliders from './modules/sliders';
 import dropdown from './modules/dropdown';
+import postInfo from './modules/projects';
 
 document.addEventListener('DOMContentLoaded', () => {
     showMenu();
@@ -67,7 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownSubmenu: '.dropdown_submenu_4',
             container: '.dropdown_4',
             cssClass:'dropdown_bottom_4'
-        });
+        });        
+    }
+    if(document.querySelector('#project_page')) {
+        postInfo();
     }
 });
 
