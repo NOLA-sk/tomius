@@ -1,12 +1,10 @@
+// import { forEach } from 'core-js/core/array';
+
 function postInfo() {
     const specifications = document.querySelector('.specifications');
     const table = document.querySelector('.table');
     const schemes = document.querySelector('.shemes_pictures');
     const opportunities = document.querySelector('.opportunities');
-
-    const dbUrl = '../db.json';
-
-    // const request = fetch()
 
     specifications.innerHTML = `
         <div class="title">

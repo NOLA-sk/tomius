@@ -11,7 +11,7 @@
     <title>ТомИУС-ПРОЕКТ</title>
 </head>
 <body>
-    <div class="main_block" id="main-page">
+    <section class="main_block" id="main-page">
         <div class="container">            
             <div class="header">
                 <header class="header_navigation">
@@ -25,7 +25,7 @@
                         <a href="#footer" class="header_navigation_menu_item">Контакты</a>
                     </nav>                    
                     <div class="header_navigation_btn">
-                        <button class="header_navigation_btn_red btn">
+                        <button class="header_navigation_btn_red first_modal_selector btn">
                             Напишите нам
                         </button>
                     </div>
@@ -63,6 +63,11 @@
                         <button class="description_wrapper_btns_contacts btn">
                             <a href="#footer" class="description_wrapper_btns_contacts_btn">Контакты</a>
                         </button>
+
+                        <button class="description_wrapper_btns_write second_modal_selector btn">
+                            Напишите нам
+                        </button>
+
                     </div>
                 </div>
                 <div class="description_wrapper">
@@ -74,9 +79,9 @@
                 </div>                            
             </div>            
         </div>
-    </div>
+    </section>
 
-    <div class="info_block" id="info">
+    <section class="info_block" id="info">
         <div class="container">
             <div class="info_wrapper">
                 <div class="info_wrapper_item">
@@ -139,9 +144,9 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="partners_block">
+    <section class="partners_block">
         <div class="container">
             <div class="partners">
                 <div class="title">
@@ -349,9 +354,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="footer_block" id="footer">
+    <section class="footer_block" id="footer">
         <div class="container">
             <footer class="footer">
                     <div class="footer_info">
@@ -444,9 +449,37 @@
                 </div>
             </div>
         </footer>
-    </div>
+    </section>
+
+    <section class="modal modal_close">
+        <div class="container">
+            <div class="wrapper">       
+                <div class="modal_header">
+                    <div class="modal_header_label title">Напишите нам</div>
+                    <button class="modal_header_close"><img src="./icons/close.svg" alt="close-modal"></button> 
+                </div>    
+                <form class="form" action="#" method="#" name="form">
+                    <div class="form_list">
+                        <div class="form_list_item">
+                            <input class="form_list_item_text" type="text" id="name" name="user_name" value="Ваше имя">
+                        </div>
+                        <div class="form_list_item">
+                            <input class="form_list_item_text" type="email" id="mail" name="user_mail" value="Ваш e-mail">
+                        </div>
+                        <div class="form_list_message_field">
+                            <textarea class="form_list_item_text textarea" name="user_message" id="msg" cols="30" rows="10">Текст письма</textarea>
+                        </div> 
+                        <div class="modal_btn">
+                            <button class="form_list_item_btn btn" type="submit">Отправить</button>
+                        </div>                       
+                    </div>                    
+                </form>
+            </div>
+        </div>        
+    </section>
 
     <script src="./js/bundle.js"></script>
+    <script src="./modal-handler.js"></script>
 
 </body>
 </html>

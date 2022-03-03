@@ -6,7 +6,6 @@ function tabs() {
     const slidesField = document.querySelector('.prodacts_slider_wrapper_cards');
     const width = window.getComputedStyle(sliderWrapper).width;
     let offset = 0;
-    console.log(width);
 
     slidesField.style.width = 100 * slides.length + '%';
 

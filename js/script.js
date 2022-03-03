@@ -7,9 +7,12 @@ import tabs from './modules/tabs';
 import sliders from './modules/sliders';
 import dropdown from './modules/dropdown';
 import postInfo from './modules/projects';
+import modal from './modules/modal';
+import formModal from './modules/forms';
 
 document.addEventListener('DOMContentLoaded', () => {
     showMenu();
+    
     if(document.querySelector('#main-page')) {
         showMoreDescr();
         tabs();
@@ -73,5 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(document.querySelector('#project_page')) {
         postInfo();
     }
+    modal();
+    formModal();
 });
 

@@ -30,6 +30,42 @@ function dropdown(_ref) {
 
 /***/ }),
 
+/***/ "./js/modules/forms.js":
+/*!*****************************!*\
+  !*** ./js/modules/forms.js ***!
+  \*****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal */ "./js/modules/modal.js");
+
+
+function formModal() {
+  const form = document.querySelector('.form');
+  const message = {
+    success: 'Спасибо! Скоро мы с вами свяжемся',
+    failure: 'Что-то пошло не так...'
+  };
+
+  function thanksMessage(message) {
+    const modalDialog = document.querySelector('.wrapper');
+    modalDialog.classList.add('modal_close');
+    const thanksModal = document.createElement('div');
+    thanksModal.classList.add('wrapper');
+    thanksModal.innerHTML = `
+                <div class="wrapper">
+                    <div class="modal_close" data-close>×</div>
+                    <div class="modal_title">${message}</div>
+                </div>
+            `;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (formModal);
+
+/***/ }),
+
 /***/ "./js/modules/menu.js":
 /*!****************************!*\
   !*** ./js/modules/menu.js ***!
@@ -55,6 +91,55 @@ function showMenu() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (showMenu);
+
+/***/ }),
+
+/***/ "./js/modules/modal.js":
+/*!*****************************!*\
+  !*** ./js/modules/modal.js ***!
+  \*****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function modal() {
+  // const openModalBtn = document.querySelector('.header_navigation_btn_red');
+  let openModalBtn = 0;
+  const modal = document.querySelector('.modal');
+  const closeModalBtn = document.querySelector('.modal_header_close');
+  const modalFeild = document.querySelector('.wrapper');
+  const modalWidth = window.getComputedStyle(modalFeild).width;
+  console.log(modalWidth);
+
+  function deleteNoDigits(str) {
+    return +str.replace(/\D/g, '');
+  }
+
+  if (deleteNoDigits(modalWidth) > 300) {
+    openModalBtn = document.querySelector('.first_modal_selector');
+  } else {
+    openModalBtn = document.querySelector('.second_modal_selector');
+  }
+
+  function openModal() {
+    openModalBtn.addEventListener('click', () => {
+      modal.classList.remove('modal_close');
+      modal.classList.add('modal_open');
+    });
+  }
+
+  function closeModal() {
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.remove('modal_open');
+      modal.classList.add('modal_close');
+    });
+  }
+
+  openModal();
+  closeModal();
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (modal);
 
 /***/ }),
 
@@ -86,13 +171,12 @@ function showMoreDescr() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+// import { forEach } from 'core-js/core/array';
 function postInfo() {
   const specifications = document.querySelector('.specifications');
   const table = document.querySelector('.table');
   const schemes = document.querySelector('.shemes_pictures');
   const opportunities = document.querySelector('.opportunities');
-  const dbUrl = '../db.json'; // const request = fetch()
-
   specifications.innerHTML = `
         <div class="title">
             Система управления процессом подготовки рабочей камеры установки токамак к экспериментам (СУТП)
@@ -280,7 +364,6 @@ function tabs() {
   const slidesField = document.querySelector('.prodacts_slider_wrapper_cards');
   const width = window.getComputedStyle(sliderWrapper).width;
   let offset = 0;
-  console.log(width);
   slidesField.style.width = 100 * slides.length + '%';
   slides.forEach(slide => {
     slide.style.width = width;
@@ -1611,7 +1694,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/sliders */ "./js/modules/sliders.js");
 /* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/dropdown */ "./js/modules/dropdown.js");
 /* harmony import */ var _modules_projects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/projects */ "./js/modules/projects.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
+/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
+
+
 
 
 
@@ -1689,6 +1776,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('#project_page')) {
     (0,_modules_projects__WEBPACK_IMPORTED_MODULE_6__["default"])();
   }
+
+  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  (0,_modules_forms__WEBPACK_IMPORTED_MODULE_8__["default"])();
 });
 }();
 /******/ })()
